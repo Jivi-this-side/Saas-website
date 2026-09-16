@@ -76,7 +76,6 @@ export default function App() {
         onScrollToGame={handleScrollToGame}
       />
 
-      {/* Trusted By Marquee Showcase */}
       <TrustedBy theme={theme} />
 
       {/* 2. Playable Shipping Game: Keep the Shipments Moving (Ultra-smooth 60fps Canvas or Removable) */}
