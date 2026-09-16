@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 36" height="36" fill="none">
+  <rect x="2" y="4" width="28" height="28" rx="7" fill="#0f172a" />
+  <path d="M9 18l5 5 10-10" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="38" y="24" fill="#0f172a" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="800" letter-spacing="-0.5">THE TESTER</text>
+</svg>

@@ -1,0 +1,253 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-pink: #f72585;
+  --color-brand-violet: #7209b7;
+  --color-brand-indigo: #3a0ca3;
+  --color-brand-amber: #ffba08;
+  --color-brand-blue: #4361ee;
+  --color-brand-cyan: #4cc9f0;
+
+  --color-sky-300: #4cc9f0;
+  --color-sky-400: #4cc9f0;
+  --color-sky-500: #4361ee;
+  --color-sky-600: #3a0ca3;
+  --color-sky-700: #2b097a;
+  --color-sky-950: #0a071b;
+
+  --color-amber-300: #ffc933;
+  --color-amber-400: #ffba08;
+  --color-amber-500: #ffba08;
+
+  --color-purple-400: #932de0;
+  --color-purple-500: #7209b7;
+  --color-purple-600: #590791;
+
+  --color-pink-400: #f84f9d;
+  --color-pink-500: #f72585;
+  --color-pink-600: #d6136e;
+}
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+    /* 6-Color Palette: #f72585, #7209b7, #3a0ca3, #ffba08, #4361ee, #4cc9f0 */
+    --color-p1: #f72585;
+    --color-p2: #7209b7;
+    --color-p3: #3a0ca3;
+    --color-p4: #ffba08;
+    --color-p5: #4361ee;
+    --color-p6: #4cc9f0;
+
+    /* Theme: Day Port (Light) */
+    --bg-base: #f7f9ff;
+    --bg-surface: #ffffff;
+    --bg-surface-elevated: #eef2ff;
+    --bg-surface-hover: #e0e7ff;
+    --border-subtle: #dbe4ff;
+    --border-strong: #c7d2fe;
+    --text-primary: #120e33;
+    --text-secondary: #312e81;
+    --text-muted: #6b7280;
+    --accent-primary: #F4F754;
+    --accent-primary-hover: #e4e738;
+    --accent-primary-contrast: #0f172a;
+    --accent-secondary: #f72585;
+    --accent-warning: #ffba08;
+    --accent-purple: #7209b7;
+    --accent-cyan: #4cc9f0;
+    --water-base: #4361ee;
+    --water-top: #4cc9f0;
+    --water-deep: #3a0ca3;
+    --crane-body: #ffba08;
+    --crane-steel: #3a0ca3;
+    --container-1: #f72585;
+    --container-2: #4361ee;
+    --container-3: #4cc9f0;
+    --container-4: #ffba08;
+    --glow-effect: 0 4px 24px -2px rgba(244, 247, 84, 0.45);
+    --badge-bg: rgba(244, 247, 84, 0.25);
+    --badge-text: #1e293b;
+    --radar-sweep: rgba(244, 247, 84, 0.3);
+  }
+
+  [data-theme="night"] {
+    /* Theme: Night Port (Dark Cyber-Maritime) */
+    --bg-base: #0a071b;
+    --bg-surface: #120d2e;
+    --bg-surface-elevated: #1a1340;
+    --bg-surface-hover: #261d5a;
+    --border-subtle: #2d2363;
+    --border-strong: #43358c;
+    --text-primary: #ffffff;
+    --text-secondary: #d4d0f5;
+    --text-muted: #958ec7;
+    --accent-primary: #F4F754;
+    --accent-primary-hover: #e4e738;
+    --accent-primary-contrast: #080318;
+    --accent-secondary: #f72585;
+    --accent-warning: #ffba08;
+    --accent-purple: #7209b7;
+    --accent-cyan: #4cc9f0;
+    --water-base: #120b33;
+    --water-top: #3a0ca3;
+    --water-deep: #060412;
+    --crane-body: #ffba08;
+    --crane-steel: #7209b7;
+    --container-1: #f72585;
+    --container-2: #4361ee;
+    --container-3: #4cc9f0;
+    --container-4: #ffba08;
+    --glow-effect: 0 0 32px rgba(244, 247, 84, 0.45);
+    --badge-bg: rgba(244, 247, 84, 0.2);
+    --badge-text: #F4F754;
+    --radar-sweep: rgba(244, 247, 84, 0.3);
+  }
+
+  [data-theme="signal"] {
+    /* Theme: Signal Port (High-Contrast Neon Radar) */
+    --bg-base: #060314;
+    --bg-surface: #0e0728;
+    --bg-surface-elevated: #1a0f44;
+    --bg-surface-hover: #291666;
+    --border-subtle: #4a1575;
+    --border-strong: #7209b7;
+    --text-primary: #ffffff;
+    --text-secondary: #f3e8ff;
+    --text-muted: #c084fc;
+    --accent-primary: #F4F754;
+    --accent-primary-hover: #e4e738;
+    --accent-primary-contrast: #060314;
+    --accent-secondary: #ffba08;
+    --accent-warning: #ffba08;
+    --accent-purple: #7209b7;
+    --accent-cyan: #4cc9f0;
+    --water-base: #0c0524;
+    --water-top: #7209b7;
+    --water-deep: #03010b;
+    --crane-body: #ffba08;
+    --crane-steel: #f72585;
+    --container-1: #f72585;
+    --container-2: #4361ee;
+    --container-3: #4cc9f0;
+    --container-4: #ffba08;
+    --glow-effect: 0 0 35px rgba(244, 247, 84, 0.55);
+    --badge-bg: rgba(244, 247, 84, 0.25);
+    --badge-text: #F4F754;
+    --radar-sweep: rgba(244, 247, 84, 0.35);
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    overflow-x: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Subtly animated scanning line & pulse */
+@keyframes radar-scan {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes float-subtle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes wave-flow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-radar {
+  animation: radar-scan 6s linear infinite;
+}
+
+.animate-float {
+  animation: float-subtle 4s ease-in-out infinite;
+}
+
+.animate-wave {
+  animation: wave-flow 12s linear infinite;
+}
+
+/* Continuous flow of goods animation using stroke-dasharray */
+@keyframes flow-goods {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -36;
+  }
+}
+
+@keyframes flow-goods-fast {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -48;
+  }
+}
+
+.animate-flow-dash {
+  animation: flow-goods 1.5s linear infinite;
+}
+
+.animate-flow-dash-fast {
+  animation: flow-goods-fast 2s linear infinite;
+}
+
+@keyframes marquee-rev {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc(-100% - 42px));
+  }
+}
+
+@keyframes marquee-continuous {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee-continuous {
+  animation: marquee-continuous 30s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-continuous:hover {
+  animation-play-state: paused;
+}
+
+
